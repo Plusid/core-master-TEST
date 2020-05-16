@@ -15,8 +15,8 @@ module.exports = async options => {
     Managers.configManager.setFromPreset("testnet");
 
     const senderWallet = delegates[9]; // better use a different delegate for each scenario initial transfer
-    let transaction1 = TransactionFactory.transfer(utils.multiSender1.address, 1000 * Math.pow(10, 8), "send coins to multisig participant 1")
-        .withFee(0.1 * Math.pow(10, 8))
+    let transaction1 = TransactionFactory.transfer(utils.multiSender1.address, 1000 * Math.pow(10, 5), "send coins to multisig participant 1")
+        .withFee(0.1 * Math.pow(10, 5))
         .withNonce(Utils.BigNumber.make(2))
         .withPassphrase(senderWallet.passphrase)
         .createOne();

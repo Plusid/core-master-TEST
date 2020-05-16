@@ -15,7 +15,7 @@ module.exports = async options => {
 
     const transactions = [
         TransactionFactory.delegateRegistration("dummydelegate1")
-            .withFee(25 * Math.pow(10, 8))
+            .withFee(25 * Math.pow(10, 5))
             .withPassphrase(utils.delRegSender.passphrase)
             .createOne(),
     ];

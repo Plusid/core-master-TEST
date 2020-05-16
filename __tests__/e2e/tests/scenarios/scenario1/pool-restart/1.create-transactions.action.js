@@ -19,8 +19,8 @@ module.exports = async options => {
     const nonce = nonce = TransactionFactory.getNonce(Identities.PublicKey.fromPassphrase(utils.senderWallet.passphrase));
 
     // first transaction which will be broadcasted to other nodes for forging
-    let transaction = TransactionFactory.transfer(utils.randomRecipient.address, 300 * Math.pow(10, 8), "transaction to add to pool before disconnecting node")
-        .withFee(0.1 * Math.pow(10, 8))
+    let transaction = TransactionFactory.transfer(utils.randomRecipient.address, 300 * Math.pow(10, 5), "transaction to add to pool before disconnecting node")
+        .withFee(0.1 * Math.pow(10, 5))
         .withPassphrase(utils.senderWallet.passphrase)
         .withNonce(nonce.plus(1))
         .createOne();
@@ -32,8 +32,8 @@ module.exports = async options => {
     console.log(`[pool-clear] disconnect node : ${JSON.stringify({ stdoutDisconnect, stderrDisconnect })}`);
 
     // second transaction which will not be broadcasted and should be kept in the node pool
-    let transaction = TransactionFactory.transfer(utils.randomRecipient2.address, 300 * Math.pow(10, 8), "transaction to add to pool before stopping node")
-        .withFee(0.1 * Math.pow(10, 8))
+    let transaction = TransactionFactory.transfer(utils.randomRecipient2.address, 300 * Math.pow(10, 5), "transaction to add to pool before stopping node")
+        .withFee(0.1 * Math.pow(10, 5))
         .withPassphrase(utils.senderWallet.passphrase)
         .withNonce(nonce.plus(2))
         .createOne();

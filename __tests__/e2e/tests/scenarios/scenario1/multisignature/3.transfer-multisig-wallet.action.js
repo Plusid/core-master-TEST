@@ -17,8 +17,8 @@ module.exports = async options => {
 
     const senderWallet = delegates[9];
     const multisigAddress = Identities.Address.fromMultiSignatureAsset(shared.multisigRegistration.asset.multiSignature);
-    let transaction1 = TransactionFactory.transfer(multisigAddress, 1000 * Math.pow(10, 8), "send coins to multisig wallet")
-        .withFee(0.1 * Math.pow(10, 8))
+    let transaction1 = TransactionFactory.transfer(multisigAddress, 1000 * Math.pow(10, 5), "send coins to multisig wallet")
+        .withFee(0.1 * Math.pow(10, 5))
         .withNonce(Utils.BigNumber.make(3))
         .withPassphrase(senderWallet.passphrase)
         .createOne();
