@@ -20,17 +20,17 @@ module.exports = async options => {
 
     for(const txType of Object.keys(utils.wallets)) {
         const wallets = utils.wallets[txType];
-        const transferAmount = 100 * Math.pow(10, 8);
+        const transferAmount = 100 * Math.pow(10, 5);
         transactions.push(
             TransactionFactory.transfer(wallets[0].address, transferAmount)
                 //.vendorField(`init for ${txType}`)
-                .withFee(0.1 * Math.pow(10, 8))
+                .withFee(0.1 * Math.pow(10, 5))
                 .withNonce(nonce.plus(1))
                 .withPassphrase(senderWallet.passphrase)
                 .createOne(),
             TransactionFactory.transfer(wallets[2].address, transferAmount)
                 //.vendorField(`init for ${txType} - 2nd signed`)
-                .withFee(0.1 * Math.pow(10, 8))
+                .withFee(0.1 * Math.pow(10, 5))
                 .withNonce(nonce.plus(2))
                 .withPassphrase(senderWallet.passphrase)
                 .createOne(),

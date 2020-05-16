@@ -32,7 +32,7 @@ module.exports = async options => {
         let transaction;
         switch (type) {
             case "transfer":
-                transaction = TransactionFactory.transfer(wallets[1].address, 2 * Math.pow(10, 8))
+                transaction = TransactionFactory.transfer(wallets[1].address, 2 * Math.pow(10, 5))
                 break;
             case "vote":
                 transaction = TransactionFactory.vote(delegates[2].publicKey)
