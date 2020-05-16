@@ -25,13 +25,13 @@ module.exports = async options => {
             const transferAmount = _balanceNeededFromTxMix(firstTxType, secondTxType);
             transactions.push(
                 TransactionFactory.transfer(wallets[0].address, transferAmount, `init double spend ${firstTxType} - ${secondTxType}`)
-                    .withFee(0.1 * Math.pow(10, 8))
+                    .withFee(0.1 * Math.pow(10, 5))
                     .withPassphrase(senderWallet.passphrase)
                     .withNonce(nonce.plus(1))
                     .createOne(),
 
                 TransactionFactory.transfer(wallets[2].address, utils.fees.secondSignRegistration + transferAmount, `init double spend ${firstTxType} - ${secondTxType}`)
-                    .withFee(0.1 * Math.pow(10, 8))
+                    .withFee(0.1 * Math.pow(10, 5))
                     .withPassphrase(senderWallet.passphrase)
                     .withNonce(nonce.plus(2))
                     .createOne(),

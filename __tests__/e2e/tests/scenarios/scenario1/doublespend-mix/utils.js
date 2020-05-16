@@ -274,7 +274,7 @@ const walletsMix = {
     },
 };
 
-const arktoshi = 10 ** 8;
+const arktoshi = 10 ** 5;
 const transferAmount = 10 * arktoshi;
 const amountNeeded = {
     transfer: transferAmount + 0.1 * arktoshi,
