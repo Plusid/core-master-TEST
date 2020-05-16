@@ -14,12 +14,12 @@ module.exports = async options => {
     Managers.configManager.setFromPreset("testnet");
 
     const transactions = [
-        TransactionFactory.transfer(utils.doubleTransferRecipient.address, 600 * Math.pow(10, 8), "first part of double spend")
-            .withFee(0.1 * Math.pow(10, 8))
+        TransactionFactory.transfer(utils.doubleTransferRecipient.address, 600 * Math.pow(10, 5), "first part of double spend")
+            .withFee(0.1 * Math.pow(10, 5))
             .withPassphrase(utils.doubleTransferSender.passphrase)
             .createOne(),
-        TransactionFactory.transfer(utils.doubleTransferRecipient.address, 600 * Math.pow(10, 8), "second part of double spend")
-            .withFee(0.1 * Math.pow(10, 8))
+        TransactionFactory.transfer(utils.doubleTransferRecipient.address, 600 * Math.pow(10, 5), "second part of double spend")
+            .withFee(0.1 * Math.pow(10, 5))
             .withNonce(Utils.BigNumber.make(1))
             .withPassphrase(utils.doubleTransferSender.passphrase)
             .createOne(),
