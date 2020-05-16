@@ -16,14 +16,14 @@ module.exports = async options => {
 
     // A => B
     let transaction1 = TransactionFactory.transfer(utils.b.address, 300 * Math.pow(10, 8), "transfer A => B")
-        .withFee(0.1 * Math.pow(10, 8))
+        .withFee(0.1 * Math.pow(10, 5)
         .withPassphrase(utils.a.passphrase)
         .createOne();
 
 
     // B => C
     let transaction2 = TransactionFactory.transfer(utils.c.address, 250 * Math.pow(10, 8), "transfer B => C")
-        .withFee(0.1 * Math.pow(10, 8))
+        .withFee(0.1 * Math.pow(10, 5))
         .withPassphrase(utils.b.passphrase)
         .createOne();
 

@@ -15,8 +15,8 @@ module.exports = async options => {
     Managers.configManager.setFromPreset("testnet");
 
     // B => C
-    let transaction2 = TransactionFactory.transfer(utils.c.address, 250 * Math.pow(10, 8), "retry transfer B => C")
-        .withFee(0.1 * Math.pow(10, 8))
+    let transaction2 = TransactionFactory.transfer(utils.c.address, 250 * Math.pow(10, 5), "retry transfer B => C")
+        .withFee(0.1 * Math.pow(10, 5))
         .withPassphrase(utils.b.passphrase)
         .createOne();
 
