@@ -137,5 +137,11 @@
         "setupFilesAfterEnv": [
             "jest-extended"
         ]
+    },
+    "dependencies": {
+        "picomatch": "^2.2.2",
+        "resolve": "^1.17.0",
+        "safe-buffer": "^5.2.1",
+        "webpack": "^2.7.0"
     }
 }
