@@ -14,11 +14,11 @@ module.exports = async options => {
     Managers.configManager.setFromPreset("testnet");
     const transactions = [
         TransactionFactory.secondSignature(utils.double2ndsigRegSender2.passphrase)
-            .withFee(5 * Math.pow(10, 8))
+            .withFee(5 * Math.pow(10, 5))
             .withPassphrase(utils.double2ndsigRegSender.passphrase)
             .createOne(),
         TransactionFactory.secondSignature(utils.double2ndsigRegSender3.passphrase)
-            .withFee(5 * Math.pow(10, 8))
+            .withFee(5 * Math.pow(10, 5))
             .withNonce(Utils.BigNumber.make(1))
             .withPassphrase(utils.double2ndsigRegSender.passphrase)
             .createOne(),

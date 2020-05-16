@@ -16,11 +16,11 @@ module.exports = async options => {
 
     const transactions = [
         TransactionFactory.vote(delegates[2].publicKey)
-            .withFee(1 * Math.pow(10, 8))
+            .withFee(1 * Math.pow(10, 5))
             .withPassphrase(utils.doubleVoteSender.passphrase)
             .createOne(),
         TransactionFactory.vote(delegates[3].publicKey)
-            .withFee(1 * Math.pow(10, 8))
+            .withFee(1 * Math.pow(10, 5))
             .withNonce(Utils.BigNumber.make(1))
             .withPassphrase(utils.doubleVoteSender.passphrase)
             .createOne(),
