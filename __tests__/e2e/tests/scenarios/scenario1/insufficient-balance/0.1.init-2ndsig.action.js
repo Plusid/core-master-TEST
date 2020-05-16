@@ -15,7 +15,7 @@ module.exports = async options => {
 
     const transactions = [
         TransactionFactory.secondSignature(utils.transfer2ndsigSender2.passphrase)
-            .withFee(5 * Math.pow(10, 8))
+            .withFee(5 * Math.pow(10, 5))
             .withPassphrase(utils.transfer2ndsigSender.passphrase)
             .createOne(),
     ];

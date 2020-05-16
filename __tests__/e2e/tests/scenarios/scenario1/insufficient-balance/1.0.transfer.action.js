@@ -14,8 +14,8 @@ module.exports = async options => {
     Managers.configManager.setFromPreset("testnet");
 
     const transactions = [
-        TransactionFactory.transfer(utils.transferRecipient.address, 1100 * Math.pow(10, 8), "transfer with insufficient balance")
-            .withFee(0.1 * Math.pow(10, 8))
+        TransactionFactory.transfer(utils.transferRecipient.address, 1100 * Math.pow(10, 5), "transfer with insufficient balance")
+            .withFee(0.1 * Math.pow(10, 5))
             .withPassphrase(utils.transferSender.passphrase)
             .createOne(),
     ];

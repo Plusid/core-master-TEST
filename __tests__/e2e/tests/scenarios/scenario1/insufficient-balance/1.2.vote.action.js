@@ -16,7 +16,7 @@ module.exports = async options => {
 
     const transactions = [
         TransactionFactory.vote(delegates[2].publicKey)
-            .withFee(1 * Math.pow(10, 8))
+            .withFee(1 * Math.pow(10, 5))
             .withPassphrase(utils.voteSender.passphrase)
             .createOne(),
     ];
