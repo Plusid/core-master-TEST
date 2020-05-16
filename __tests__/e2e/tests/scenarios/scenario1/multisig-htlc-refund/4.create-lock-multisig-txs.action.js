@@ -30,9 +30,9 @@ module.exports = async options => {
                 },
             },
             utils.randomWallet1.address,
-            3 * Math.pow(10, 8)
+            3 * Math.pow(10, 5)
         )
-        .withFee(0.1 * Math.pow(10, 8))
+        .withFee(0.1 * Math.pow(10, 5))
         .withSenderPublicKey(multisigPublicKey)
         .withPassphraseList([
             utils.multiSender1.passphrase,

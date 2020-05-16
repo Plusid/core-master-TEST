@@ -31,9 +31,9 @@ module.exports = async options => {
                 },
             },
             utils.htlcRecipient1.address,
-            3 * Math.pow(10, 8)
+            3 * Math.pow(10, 5)
         )
-        .withFee(0.1 * Math.pow(10, 8))
+        .withFee(0.1 * Math.pow(10, 5))
         .withPassphrase(utils.htlcSender.passphrase)
         .createOne();
 
@@ -47,9 +47,9 @@ module.exports = async options => {
                 },
             },
             utils.htlcRecipient2.address,
-            3 * Math.pow(10, 8)
+            3 * Math.pow(10, 5)
         )
-        .withFee(0.1 * Math.pow(10, 8))
+        .withFee(0.1 * Math.pow(10, 5))
         .withNonce(Utils.BigNumber.make(1))
         .withPassphrase(utils.htlcSender.passphrase)
         .createOne();
@@ -64,9 +64,9 @@ module.exports = async options => {
                 },
             },
             utils.htlcRecipient3.address,
-            3 * Math.pow(10, 8)
+            3 * Math.pow(10, 5)
         )
-        .withFee(0.1 * Math.pow(10, 8))
+        .withFee(0.1 * Math.pow(10, 5))
         .withNonce(Utils.BigNumber.make(2))
         .withPassphrase(utils.htlcSender.passphrase)
         .createOne();
