@@ -11,7 +11,7 @@ afterAll(support.tearDown);
 describe("Transaction Forging - Multi Signature Registration", () => {
     it("should broadcast, accept and forge it [Signed with 1 Passphrase]", async () => {
         // Funds to register a multi signature wallet
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -40,7 +40,7 @@ describe("Transaction Forging - Multi Signature Registration", () => {
     it("should broadcast, accept and forge it [Signed with 2 Passphrases]", async () => {
         const passphrase = secrets[2];
         // Make a fresh wallet for the second signature tests
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -77,7 +77,7 @@ describe("Transaction Forging - Multi Signature Registration", () => {
 
     it("should reject before AIP11 milestone and accept after AIP11 milestone", async () => {
         const passphrase = secrets[6];
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
