@@ -21,11 +21,11 @@ describe("applyToRecipient - Multipayment scenario", () => {
      */
     const bobPassphrase = "bob pass phrase1";
     const bobAddress = Identities.Address.fromPassphrase(bobPassphrase, 23);
-    const bobInitialFund = 50 * 1e8; // 50 ARK
+    const bobInitialFund = 50 * 1e5; // 50 ARK
 
     const alicePassphrase = "alice pass phrase1";
     const aliceAddress = Identities.Address.fromPassphrase(alicePassphrase, 23);
-    const aliceInitialFund = 2500 * 1e8; // 2500 ARK
+    const aliceInitialFund = 2500 * 1e5; // 2500 ARK
 
     const randomAddress = Identities.Address.fromPassphrase("ran dom addr1", 23);
 
@@ -50,11 +50,11 @@ describe("applyToRecipient - Multipayment scenario", () => {
         const multipaymentToBobAndAlice = TransactionFactory.multiPayment([
             {
                 recipientId: bobAddress,
-                amount: (2000 * 1e8).toFixed(), // 2000 ARK
+                amount: (2000 * 1e5).toFixed(), // 2000 ARK
             },
             {
                 recipientId: aliceAddress,
-                amount: (10 * 1e8).toFixed(), // 10 ARK
+                amount: (10 * 1e5).toFixed(), // 10 ARK
             },
         ])
             .withPassphrase(alicePassphrase)
@@ -63,7 +63,7 @@ describe("applyToRecipient - Multipayment scenario", () => {
         await delay(1000);
         await expect(multipaymentToBobAndAlice.id).toBeForged();
 
-        const bobTransfer = TransactionFactory.transfer(randomAddress, 2000 * 1e8)
+        const bobTransfer = TransactionFactory.transfer(randomAddress, 2000 * 1e5)
             .withPassphrase(bobPassphrase)
             .createOne();
         await expect(bobTransfer).toBeAccepted();
@@ -77,7 +77,7 @@ describe("applyToRecipient - transfer and multipayment classic scenarios", () =>
         // just send funds to a new wallet, and try to send more than the funds from this new wallet
         const bobPassphrase = "bob pass phrase2";
         const bobAddress = Identities.Address.fromPassphrase(bobPassphrase, 23);
-        const bobInitialFund = 100 * 1e8; // 100 ARK
+        const bobInitialFund = 100 * 1e5; // 100 ARK
 
         const randomAddress = Identities.Address.fromPassphrase(secrets[1], 23);
         const initialTxToBob = TransactionFactory.transfer(bobAddress, bobInitialFund)
@@ -94,7 +94,7 @@ describe("applyToRecipient - transfer and multipayment classic scenarios", () =>
         await expect(bobTransferMoreThanBalance).not.toBeAccepted();
 
         // now a transaction with fees + amount === balance should pass
-        const fee = 1e7;
+        const fee = 1e4;
         const bobTransferValid = TransactionFactory.transfer(randomAddress, bobInitialFund - fee)
             .withPassphrase(bobPassphrase)
             .withFee(fee)
@@ -107,7 +107,7 @@ describe("applyToRecipient - transfer and multipayment classic scenarios", () =>
         // just send funds to a new wallet with multipayment, and try to send more than the funds from this new wallet
         const bobPassphrase = "bob pass phrase3";
         const bobAddress = Identities.Address.fromPassphrase(bobPassphrase, 23);
-        const bobInitialFund = 100 * 1e8; // 100 ARK
+        const bobInitialFund = 100 * 1e5; // 100 ARK
 
         const randomAddress = Identities.Address.fromPassphrase("a b c", 23);
 
@@ -134,7 +134,7 @@ describe("applyToRecipient - transfer and multipayment classic scenarios", () =>
         await expect(bobTransferMoreThanBalance).not.toBeAccepted();
 
         // now a transaction with fees + amount === balance should pass
-        const fee = 1e7;
+        const fee = 1e4;
         const bobTransferValid = TransactionFactory.transfer(randomAddress, bobInitialFund - fee)
             .withPassphrase(bobPassphrase)
             .withFee(fee)
@@ -148,7 +148,7 @@ describe("Pool transactions when AcceptBlockHandler fails", () => {
     // just send funds to a new wallet, and try to send more than the funds from this new wallet
     const bobPassphrase = "bob pass phrase4";
     const bobAddress = Identities.Address.fromPassphrase(bobPassphrase, 23);
-    const bobInitialFund = 100 * 1e8; // 100 ARK
+    const bobInitialFund = 100 * 1e5; // 100 ARK
 
     const randomAddress = Identities.Address.fromPassphrase(secrets[1], 23);
 
