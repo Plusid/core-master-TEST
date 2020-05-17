@@ -166,7 +166,7 @@ describe("Transaction Forging - Business update", () => {
 
         it("should broadcast, accept and forge it [Signed with 2 Passphrases]", async () => {
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 1000 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 1000 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 
@@ -244,7 +244,7 @@ describe("Transaction Forging - Business update", () => {
 
         it("should broadcast, accept and forge it [3-of-3 multisig]", async () => {
             // Funds to register a multi signature wallet
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 
