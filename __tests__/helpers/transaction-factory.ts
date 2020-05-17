@@ -15,7 +15,7 @@ interface IPassphrasePair {
 }
 
 export class TransactionFactory {
-    public static transfer(recipientId?: string, amount: number = 2 * 1e8, vendorField?: string): TransactionFactory {
+    public static transfer(recipientId?: string, amount: number = 2 * 1e5, vendorField?: string): TransactionFactory {
         const builder = Transactions.BuilderFactory.transfer()
             .amount(Utils.BigNumber.make(amount).toFixed())
             .recipientId(recipientId || Identities.Address.fromPassphrase(defaultPassphrase));
@@ -91,7 +91,7 @@ export class TransactionFactory {
     public static htlcLock(
         lockAsset: Interfaces.IHtlcLockAsset,
         recipientId?: string,
-        amount: number = 2 * 1e8,
+        amount: number = 2 * 1e5,
     ): TransactionFactory {
         const builder = Transactions.BuilderFactory.htlcLock()
             .htlcLockAsset(lockAsset)
