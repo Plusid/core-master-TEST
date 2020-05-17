@@ -14,7 +14,7 @@ afterAll(support.tearDown);
 describe("Transaction Forging - HTLC Claim", () => {
     it("should broadcast, accept and forge it [Signed with 1 Passphase]", async () => {
         // Initial Funds
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -58,7 +58,7 @@ describe("Transaction Forging - HTLC Claim", () => {
         const passphrase = secondPassphrase;
 
         // Initial Funds
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -108,7 +108,7 @@ describe("Transaction Forging - HTLC Claim", () => {
 
     it("should broadcast, accept and forge it [3-of-3 multisig]", async () => {
         // Funds to register a multi signature wallet
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(secrets[3]), 50 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(secrets[3]), 50 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -137,7 +137,7 @@ describe("Transaction Forging - HTLC Claim", () => {
         const multiSigAddress = Identities.Address.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
         const multiSigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
 
-        const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 20 * 1e8)
+        const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 20 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
