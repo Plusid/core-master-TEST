@@ -21,7 +21,7 @@ describe("Transaction Forging - Transfer", () => {
 
     it("should broadcast, accept and forge it [Signed with 2 Passphrases]", async () => {
         // Funds to register a second passphrase
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -50,7 +50,7 @@ describe("Transaction Forging - Transfer", () => {
 
     it("should broadcast, accept and forge it [3-of-3 multisig]", async () => {
         // Funds to register a multi signature wallet
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(secrets[3]), 50 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(secrets[3]), 50 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -79,7 +79,7 @@ describe("Transaction Forging - Transfer", () => {
         const multiSigAddress = Identities.Address.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
         const multiSigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
 
-        const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 20 * 1e8)
+        const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 20 * 1e5)
             .withPassphrase(secrets[0])
             .createOne();
 
@@ -88,7 +88,7 @@ describe("Transaction Forging - Transfer", () => {
         await expect(multiSignatureFunds.id).toBeForged();
 
         // Create outgoing multi signature wallet transfer
-        const multiSigTransfer = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 10 * 1e8)
+        const multiSigTransfer = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 10 * 1e5)
             .withSenderPublicKey(multiSigPublicKey)
             .withPassphraseList(passphrases)
             .createOne();
