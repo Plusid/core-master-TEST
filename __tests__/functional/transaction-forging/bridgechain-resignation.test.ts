@@ -110,7 +110,7 @@ describe("Transaction Forging - Bridgechain resignation", () => {
             const secondPassphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 200 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 200 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 
