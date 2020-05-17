@@ -690,7 +690,7 @@ describe("MultiSignatureRegistrationTransaction", () => {
             ];
 
             const participantWallet = walletManager.findByPublicKey(participants[0]);
-            participantWallet.balance = Utils.BigNumber.make(1e8 * 100);
+            participantWallet.balance = Utils.BigNumber.make(1e5 * 100);
 
             const multSigRegistration = TransactionFactory.multiSignature(participants)
                 .withPassphrase(passphrases[0])
@@ -711,7 +711,7 @@ describe("MultiSignatureRegistrationTransaction", () => {
 
             expect(multiSigWallet.hasMultiSignature()).toBeTrue();
 
-            multiSigWallet.balance = Utils.BigNumber.make(1e8 * 100);
+            multiSigWallet.balance = Utils.BigNumber.make(1e5 * 100);
 
             const transferBuilder = Transactions.BuilderFactory.transfer()
                 .recipientId(multiSigWallet.address)
@@ -1212,7 +1212,7 @@ describe.each([EpochTimestamp, BlockHeight])("Htlc claim - expiration type %i", 
         walletManager.reindex(lockWallet);
         walletManager.reindex(claimWallet);
 
-        const amount = 6 * 1e8;
+        const amount = 6 * 1e5;
         const htlcLockAsset = {
             secretHash: htlcSecretHashHex,
             expiration: {
@@ -1301,7 +1301,7 @@ describe.each([EpochTimestamp, BlockHeight])("Htlc claim - expiration type %i", 
         });
 
         it("should throw if lock expired", async () => {
-            const amount = 1e9;
+            const amount = 1e6;
             const htlcLockAsset = {
                 secretHash: htlcSecretHashHex,
                 expiration: {
@@ -1470,7 +1470,7 @@ describe.each([EpochTimestamp, BlockHeight])("Htlc refund - expiration type %i",
 
         walletManager.reindex(lockWallet);
 
-        const amount = 6 * 1e8;
+        const amount = 6 * 1e5;
         const htlcLockAsset = {
             secretHash: htlcSecretHashHex,
             expiration: {
@@ -1541,7 +1541,7 @@ describe.each([EpochTimestamp, BlockHeight])("Htlc refund - expiration type %i",
         });
 
         it("should throw if lock didn't expire - expiration type %i", async () => {
-            const amount = 6 * 1e8;
+            const amount = 6 * 1e5;
             const htlcLockAsset = {
                 secretHash: htlcSecretHashHex,
                 expiration: {
