@@ -211,11 +211,11 @@ describe("Connection", () => {
         });
 
         it("should remove transactions that cannot be applied due to previous transaction", async () => {
-            const transactionA = TransactionFactory.transfer(delegates[21].address, 101 * 1e8)
+            const transactionA = TransactionFactory.transfer(delegates[21].address, 101 * 1e5)
                 .withPassphrase(delegates[20].passphrase)
                 .build(1)[0];
 
-            const transactionBs = TransactionFactory.transfer(delegates[20].address, 100 * 1e8)
+            const transactionBs = TransactionFactory.transfer(delegates[20].address, 100 * 1e5)
                 .withPassphrase(delegates[21].passphrase)
                 .build(5);
 
