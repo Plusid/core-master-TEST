@@ -654,7 +654,7 @@ describe("Connection", () => {
 
             mockPoolWallet.balance = Utils.BigNumber.make(1e12);
 
-            const transactions = TransactionFactory.transfer(delegates[1].address, 5 * 1e8)
+            const transactions = TransactionFactory.transfer(delegates[1].address, 5 * 1e5)
                 .withPassphrase(delegates[0].passphrase)
                 .create(10);
 
@@ -1115,7 +1115,7 @@ describe("Connection", () => {
             Managers.configManager.setHeight(1);
 
             addTransactions([
-                TransactionFactory.transfer("AabMvWPVKbdTHRcGBpATq9TEMiMD5xeJh9", 2 * 1e8, "#".repeat(64))
+                TransactionFactory.transfer("AabMvWPVKbdTHRcGBpATq9TEMiMD5xeJh9", 2 * 1e5, "#".repeat(64))
                     .withNetwork("unitnet")
                     .withPassphrase(delegates[1].passphrase)
                     .build()[0],
@@ -1131,7 +1131,7 @@ describe("Connection", () => {
             Managers.configManager.setHeight(100000);
 
             addTransactions([
-                TransactionFactory.transfer("AabMvWPVKbdTHRcGBpATq9TEMiMD5xeJh9", 2 * 1e8, "#".repeat(255))
+                TransactionFactory.transfer("AabMvWPVKbdTHRcGBpATq9TEMiMD5xeJh9", 2 * 1e5, "#".repeat(255))
                     .withNetwork("unitnet")
                     .withPassphrase(delegates[1].passphrase)
                     .build()[0],
