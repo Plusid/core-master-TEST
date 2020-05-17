@@ -35,8 +35,8 @@ describe("Wallet Manager", () => {
         let lockWallet;
         let claimWallet;
 
-        const initialLockWalletBalance = Utils.BigNumber.make(45 * 1e8);
-        const initialDelegateWalletBalance = Utils.BigNumber.make(1000 * 1e8);
+        const initialLockWalletBalance = Utils.BigNumber.make(45 * 1e5);
+        const initialDelegateWalletBalance = Utils.BigNumber.make(1000 * 1e5);
 
         beforeEach(() => {
             walletManager = new WalletManager();
@@ -60,7 +60,7 @@ describe("Wallet Manager", () => {
         describe("apply and revert transaction", () => {
             it("should update balance and vote balance when lock wallet votes for a delegate", async () => {
                 // prepare htlc lock transaction
-                const amount = 6 * 1e8;
+                const amount = 6 * 1e5;
                 const htlcLockAsset = {
                     secretHash: htlcSecretHashHex,
                     expiration: {
@@ -71,7 +71,7 @@ describe("Wallet Manager", () => {
                 const lockTransaction = TransactionFactory.htlcLock(htlcLockAsset, claimWallet.address, amount)
                     .withPassphrase(lockPassphrase)
                     .withNonce(Utils.BigNumber.ONE)
-                    .withFee(1e7)
+                    .withFee(1e4)
                     .build(1)[0];
 
                 // prepare claim transaction
@@ -177,12 +177,12 @@ describe("Wallet Manager", () => {
 
             it("should update balance and vote balance when claim wallet votes for a delegate", async () => {
                 // claim wallet will have some initial balance for voting
-                const initialClaimWalletBalance = Utils.BigNumber.make(33 * 1e8);
+                const initialClaimWalletBalance = Utils.BigNumber.make(33 * 1e5);
                 claimWallet.balance = initialClaimWalletBalance;
                 walletManager.reindex(claimWallet);
 
                 // prepare htlc lock transaction
-                const amount = 6 * 1e8;
+                const amount = 6 * 1e5;
                 const htlcLockAsset = {
                     secretHash: htlcSecretHashHex,
                     expiration: {
@@ -192,7 +192,7 @@ describe("Wallet Manager", () => {
                 };
                 const lockTransaction = TransactionFactory.htlcLock(htlcLockAsset, claimWallet.address, amount)
                     .withPassphrase(lockPassphrase)
-                    .withFee(1e7)
+                    .withFee(1e4)
                     .build(1)[0];
 
                 // prepare claim transaction
@@ -298,8 +298,8 @@ describe("Wallet Manager", () => {
 
         let lockWallet;
 
-        const initialLockWalletBalance = Utils.BigNumber.make(45 * 1e8);
-        const initialDelegateWalletBalance = Utils.BigNumber.make(1000 * 1e8);
+        const initialLockWalletBalance = Utils.BigNumber.make(45 * 1e5);
+        const initialDelegateWalletBalance = Utils.BigNumber.make(1000 * 1e5);
 
         beforeEach(() => {
             walletManager = new WalletManager();
@@ -320,7 +320,7 @@ describe("Wallet Manager", () => {
             it("should update balance and vote balance when lock wallet votes for a delegate", async () => {
                 lockWallet.nonce = Utils.BigNumber.ZERO;
                 // prepare htlc lock transaction
-                const amount = 6 * 1e8;
+                const amount = 6 * 1e5;
                 const htlcLockAsset = {
                     secretHash: htlcSecretHashHex,
                     expiration: {
@@ -334,7 +334,7 @@ describe("Wallet Manager", () => {
                     amount,
                 )
                     .withPassphrase(lockPassphrase)
-                    .withFee(1e7)
+                    .withFee(1e4)
                     .withNonce(Utils.BigNumber.make(1))
                     .build(1)[0];
 
