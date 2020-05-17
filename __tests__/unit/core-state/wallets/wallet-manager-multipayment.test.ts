@@ -43,8 +43,8 @@ describe("Wallet Manager", () => {
         let senderWallet;
         let recipientsWallets;
 
-        const initialSenderWalletBalance = Utils.BigNumber.make(45 * 1e8);
-        const initialDelegateWalletBalance = Utils.BigNumber.make(1000 * 1e8);
+        const initialSenderWalletBalance = Utils.BigNumber.make(45 * 1e5);
+        const initialDelegateWalletBalance = Utils.BigNumber.make(1000 * 1e5);
 
         beforeEach(() => {
             walletManager = new WalletManager();
@@ -138,7 +138,7 @@ describe("Wallet Manager", () => {
                 delegate.setAttribute("delegate.voteBalance", delegate.balance);
                 walletManager.reindex(delegate);
 
-                const initialRecipientsBalance = Utils.BigNumber.make(123 * 1e8);
+                const initialRecipientsBalance = Utils.BigNumber.make(123 * 1e5);
                 recipientsWallets.map(w => (w.balance = initialRecipientsBalance));
 
                 expect(senderWallet.balance).toEqual(initialSenderWalletBalance);
