@@ -18,7 +18,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const passphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
@@ -50,7 +50,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const passphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
@@ -73,7 +73,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const passphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
@@ -114,7 +114,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const passphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
@@ -160,7 +160,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const secondPassphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
@@ -202,7 +202,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const secondPassphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
@@ -235,7 +235,7 @@ describe("Transaction Forging - Delegate Resignation", () => {
             const secondPassphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 100 * 1e5)
                 .withPassphrase(genesisPassphrase)
                 .createOne();
 
