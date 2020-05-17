@@ -153,7 +153,7 @@ describe("Transaction Forging - Business registration", () => {
 
         it("should broadcast, accept and forge it [Signed with 2 Passphrases]", async () => {
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 150 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 150 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 
@@ -216,7 +216,7 @@ describe("Transaction Forging - Business registration", () => {
         let multiSigPublicKey;
         it("should broadcast, accept and forge it [3 of 5]", async () => {
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 
@@ -238,7 +238,7 @@ describe("Transaction Forging - Business registration", () => {
             multiSigAddress = Identities.Address.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
             multiSigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
 
-            const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 100 * 1e8)
+            const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 100 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 
