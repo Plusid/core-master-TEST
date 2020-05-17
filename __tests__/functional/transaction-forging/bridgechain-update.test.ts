@@ -135,7 +135,7 @@ describe("Transaction Forging - Bridgechain update", () => {
             const secondPassphrase = generateMnemonic();
 
             // Initial Funds
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 200 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 200 * 1e5)
                 .withPassphrase(secrets[2])
                 .withNonce(Utils.BigNumber.make(2))
                 .createOne();
@@ -211,7 +211,7 @@ describe("Transaction Forging - Bridgechain update", () => {
         ];
         it("should broadcast, accept and forge it [3-of-3 multisig]", async () => {
             // Funds to register a multi signature wallet
-            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e8)
+            const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(passphrase), 50 * 1e5)
                 .withPassphrase(secrets[2])
                 .withNonce(Utils.BigNumber.make(3))
                 .createOne();
@@ -235,7 +235,7 @@ describe("Transaction Forging - Bridgechain update", () => {
             const multiSigAddress = Identities.Address.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
             const multiSigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
 
-            const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 150 * 1e8)
+            const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 150 * 1e5)
                 .withPassphrase(secrets[2])
                 .withNonce(Utils.BigNumber.make(4))
                 .createOne();
