@@ -10,8 +10,8 @@ Handlers.Registry.registerTransactionHandler(MagistrateHandlers.BridgechainResig
 Handlers.Registry.registerTransactionHandler(MagistrateHandlers.BridgechainUpdateTransactionHandler);
 
 const passphrase = "another dummy passphrase";
-const staticFeeMagistrate = 50 * 1e8; // static fee set up for all magistrate txs
-const dynamicFeeMagistrate = 45 * 1e8; // high enough fee to be accepted on dynamic fee
+const staticFeeMagistrate = 50 * 1e5; // static fee set up for all magistrate txs
+const dynamicFeeMagistrate = 45 * 1e5; // high enough fee to be accepted on dynamic fee
 const lowFee = 1000; // too low for any tx
 
 export const staticFeeTxs = {
