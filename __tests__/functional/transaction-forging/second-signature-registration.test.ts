@@ -19,7 +19,7 @@ describe("Transaction Forging - Second Signature Registration", () => {
 
     it("should not broadcast, accept and forge it [3-of-3 multisig]", async () => {
         // Funds to register a multi signature wallet
-        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(secrets[3]), 50 * 1e8)
+        const initialFunds = TransactionFactory.transfer(Identities.Address.fromPassphrase(secrets[3]), 50 * 1e5)
             .withPassphrase(secrets[1])
             .createOne();
 
@@ -48,7 +48,7 @@ describe("Transaction Forging - Second Signature Registration", () => {
         const multiSigAddress = Identities.Address.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
         const multiSigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
 
-        const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 20 * 1e8)
+        const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 20 * 1e5)
             .withPassphrase(secrets[1])
             .createOne();
 
@@ -67,7 +67,7 @@ describe("Transaction Forging - Second Signature Registration", () => {
         await expect(secondSignature.id).not.toBeForged();
 
         // Create transfer to assert multi sig wallet can still send funds
-        const transfer = TransactionFactory.transfer(multiSigAddress, 18 * 1e8)
+        const transfer = TransactionFactory.transfer(multiSigAddress, 18 * 1e5)
             .withSenderPublicKey(multiSigPublicKey)
             .withPassphraseList(passphrases)
             .createOne();
