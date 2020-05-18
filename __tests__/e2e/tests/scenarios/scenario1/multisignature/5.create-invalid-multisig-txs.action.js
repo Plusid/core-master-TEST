@@ -19,8 +19,8 @@ module.exports = async options => {
     const multisigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(shared.multisigRegistration.asset.multiSignature);
 
     const transactions = [
-        TransactionFactory.transfer(utils.randomWallet2.address, 1e8)
-            .withFee(1e7)
+        TransactionFactory.transfer(utils.randomWallet2.address, 1e5)
+            .withFee(1e4)
             .withNonce(Utils.BigNumber.make(1))
             .withSenderPublicKey(multisigPublicKey)
             .withPassphraseList([
@@ -28,8 +28,8 @@ module.exports = async options => {
                 utils.multiSender2.passphrase,
             ])
             .createOne(),
-        TransactionFactory.transfer(utils.randomWallet2.address, 1e8)
-            .withFee(1e7)
+        TransactionFactory.transfer(utils.randomWallet2.address, 1e5)
+            .withFee(1e4)
             .withNonce(Utils.BigNumber.make(1))
             .withSenderPublicKey(multisigPublicKey)
             .withPassphraseList([
