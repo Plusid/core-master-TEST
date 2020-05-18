@@ -3,17 +3,17 @@ jest.mock("@arkecosystem/core-container", () => {
         app: {
             getConfig: () => {
                 return {
-                    get: () => 1000000 * 1e8,
+                    get: () => 1000000 * 1e5,
                     getMilestone: () => ({
                         height: 1,
-                        reward: 2 * 1e8,
+                        reward: 2 * 1e5,
                     }),
                     genesisBlock: {
-                        totalAmount: 1000000 * 1e8,
+                        totalAmount: 1000000 * 1e5,
                     },
                     all: () => ({
-                        genesisBlock: { totalAmount: 1000000 * 1e8 },
-                        milestones: [{ height: 1, reward: 2 * 1e8 }],
+                        genesisBlock: { totalAmount: 1000000 * 1e5 },
+                        milestones: [{ height: 1, reward: 2 * 1e5 }],
                     }),
                 };
             },
@@ -22,10 +22,10 @@ jest.mock("@arkecosystem/core-container", () => {
                     return {
                         getMilestone: () => ({
                             height: 1,
-                            reward: 2 * 1e8,
+                            reward: 2 * 1e5,
                         }),
                         genesisBlock: {
-                            totalAmount: 1000000 * 1e8,
+                            totalAmount: 1000000 * 1e5,
                         },
                     };
                 }
