@@ -33,7 +33,7 @@ const getGenesisTransactionIds = memoize(_ => {
 export const formatSatoshi = (amount: BigNumber): string => {
     const localeString = (+amount / SATOSHI).toLocaleString("en", {
         minimumFractionDigits: 0,
-        maximumFractionDigits: 8,
+        maximumFractionDigits: 5,
     });
 
     return `${localeString} ${configManager.get("network.client.symbol")}`;
