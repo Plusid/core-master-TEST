@@ -21,13 +21,13 @@ beforeEach(() => {
 describe("Delegate Calculator", () => {
     describe("calculateApproval", () => {
         it("should calculate correctly with a height", () => {
-            attributes.voteBalance = Utils.BigNumber.make(10000 * 1e8);
+            attributes.voteBalance = Utils.BigNumber.make(10000 * 1e5);
 
             expect(calculateApproval(delegate, 1)).toBe(1);
         });
 
         it("should calculate correctly without a height", () => {
-            attributes.voteBalance = Utils.BigNumber.make(10000 * 1e8);
+            attributes.voteBalance = Utils.BigNumber.make(10000 * 1e5);
 
             expect(calculateApproval(delegate)).toBe(1);
         });

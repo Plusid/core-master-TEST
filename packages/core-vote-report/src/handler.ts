@@ -21,7 +21,7 @@ const formatDelegates = (
             .filter(
                 wallet =>
                     wallet.getAttribute<string>("vote") === delegate.publicKey &&
-                    wallet.balance.isGreaterThan(0.1 * 1e8),
+                    wallet.balance.isGreaterThan(0.1 * 1e5),
             );
 
         const approval: string = Number(delegateCalculator.calculateApproval(delegate, lastHeight)).toLocaleString(
@@ -37,7 +37,7 @@ const formatDelegates = (
         });
 
         const votes: string = Number(
-            delegate.getAttribute<Utils.BigNumber>("delegate.voteBalance").div(1e8),
+            delegate.getAttribute<Utils.BigNumber>("delegate.voteBalance").div(1e5),
         ).toLocaleString(undefined, {
             maximumFractionDigits: 0,
         });
@@ -81,7 +81,7 @@ export const handler = (request, h) => {
 
     const voters: State.IWallet[] = databaseService.walletManager
         .allByPublicKey()
-        .filter(wallet => wallet.hasVoted() && (wallet.balance as Utils.BigNumber).isGreaterThan(0.1 * 1e8));
+        .filter(wallet => wallet.hasVoted() && (wallet.balance as Utils.BigNumber).isGreaterThan(0.1 * 1e5));
 
     const totalVotes: Utils.BigNumber = voters
         .map(wallet => wallet.balance)
@@ -103,8 +103,8 @@ export const handler = (request, h) => {
             voters: voters.length.toLocaleString(undefined, {
                 maximumFractionDigits: 0,
             }),
-            supply: supply.div(1e8).toFixed(),
-            totalVotes: totalVotes.div(1e8).toFixed(),
+            supply: supply.div(1e5).toFixed(),
+            totalVotes: totalVotes.div(1e5).toFixed(),
             percentage: totalVotes
                 .times(100)
                 .div(supply)

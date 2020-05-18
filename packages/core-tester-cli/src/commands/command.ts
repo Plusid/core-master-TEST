@@ -198,7 +198,7 @@ export abstract class BaseCommand extends Command {
 
     protected toSatoshi(value) {
         return Utils.BigNumber.make(value)
-            .times(1e8)
+            .times(1e5)
             .toFixed();
     }
 

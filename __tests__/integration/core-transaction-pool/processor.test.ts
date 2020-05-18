@@ -250,10 +250,10 @@ describe("Transaction Guard", () => {
             expect(processor.getErrors()).toEqual({});
 
             const amount1 = delegateWallet.balance / 2;
-            const fee = 0.1 * 1e8;
-            const voteFee = 1e8;
-            const delegateRegFee = 25 * 1e8;
-            const signatureFee = 5 * 1e8;
+            const fee = 0.1 * 1e5;
+            const voteFee = 1e5;
+            const delegateRegFee = 25 * 1e5;
+            const signatureFee = 5 * 1e5;
 
             const transfers = TransactionFactory.transfer(newAddress, amount1)
                 .withNetwork("unitnet")
