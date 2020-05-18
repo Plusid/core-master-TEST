@@ -33,11 +33,11 @@ describe("Delegate Calculator", () => {
         });
 
         it("should calculate correctly with 2 decimals", () => {
-            attributes.voteBalance = Utils.BigNumber.make(16500 * 1e8);
+            attributes.voteBalance = Utils.BigNumber.make(16500 * 1e5);
 
             expect(calculateApproval(delegate, 1)).toBe(1.65);
 
-            attributes.voteBalance = Utils.BigNumber.make(100 * 1e8);
+            attributes.voteBalance = Utils.BigNumber.make(100 * 1e5);
             expect(calculateApproval(delegate, 1)).toBe(0.01);
         });
     });
