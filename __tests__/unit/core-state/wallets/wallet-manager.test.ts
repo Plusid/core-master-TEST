@@ -278,7 +278,7 @@ describe("Wallet Manager", () => {
     describe("revertTransaction", () => {
         it("should revert the transaction from the sender & recipient", async () => {
             const transaction = TransactionFactory.transfer("AHXtmB84sTZ9Zd35h9Y1vfFvPE2Xzqj8ri", 245098000000000)
-                .withFee(1 * 1e8)
+                .withFee(1 * 1e5)
                 .withPassphrase("secret")
                 .build()[0];
 
