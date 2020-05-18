@@ -266,7 +266,7 @@ describe("Transaction Forging - Business update", () => {
             const multiSigAddress = Identities.Address.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
             const multiSigPublicKey = Identities.PublicKey.fromMultiSignatureAsset(multiSignature.asset.multiSignature);
 
-            const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 200 * 1e8)
+            const multiSignatureFunds = TransactionFactory.transfer(multiSigAddress, 200 * 1e5)
                 .withPassphrase(secrets[0])
                 .createOne();
 

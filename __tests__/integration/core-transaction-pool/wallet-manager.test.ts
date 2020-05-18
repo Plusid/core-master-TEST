@@ -11,7 +11,7 @@ import { delegates, genesisBlock, wallets } from "../../utils/fixtures/unitnet";
 import { generateWallets } from "../../utils/generators/wallets";
 import { setUpFull, tearDownFull } from "./__support__/setup";
 
-const satoshi = 1e8;
+const satoshi = 1e5;
 let container: Container.IContainer;
 let poolWalletManager: WalletManager;
 let blockchain: Blockchain.IBlockchain;
