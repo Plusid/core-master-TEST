@@ -46,5 +46,15 @@
         "block": {
             "idFullSha256": true
         }
+    },
+    {
+        "height": 22600,
+        "fees": {
+            "staticFees": {
+                "transfer": 10000
+            }
+        }
     }
+
+         
 ]
