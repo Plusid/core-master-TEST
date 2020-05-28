@@ -222,7 +222,7 @@ if [ "$FAILED" == "Y" ]; then
 fi
 
 cd "$HOME/core-bridgechain"
-HAS_REMOTE=$(git branch -a | fgrep -o "remotes/origin/development")
+HAS_REMOTE=$(git branch -a | fgrep -o "remotes/origin/chore/bridgechain-changes")
 if [ ! -z "$HAS_REMOTE" ]; then
     git checkout development
 fi
