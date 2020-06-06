@@ -36,44 +36,44 @@ mkdir -p "$HOME/.deployer/infinitytrust/"
 CONFIG_PATH="$HOME/.deployer/infinitytrust/config.json"
 cat > "$CONFIG_PATH" <<- EOF
 {
-  "coreIp": "159.89.186.57",
+  "coreIp": "127.0.0.1",
   "p2pPort": 4002,
   "apiPort": 4003,
   "webhookPort": 4004,
   "jsonRpcPort": 8080,
   "explorerIp": "0.0.0.0",
   "explorerPort": 4200,
-  "chainName": "infinitytrust",
-  "token": "INFT",
+  "chainName": "infinity",
+  "token": "FFF",
   "cliAlias": "CHAIN_NAME",
   "databaseHost": "localhost",
   "databasePort": "5432",
   "databaseName": "core_bridgechain",
   "symbol": "∞",
   "mainnetPeers": [
-    "165.227.177.72"
+    "104.248.8.11"
   ],
   "devnetPeers": [
-    "165.227.102.202"
+    "104.248.8.11"
   ],
-  "mainnetPrefix": "t",
+  "mainnetPrefix": "G",
   "devnetPrefix": "x",
-  "testnetPrefix": "m",
+  "testnetPrefix": "t",
   "fees": {
     "static": {
-      "transfer": "10000000",
-      "vote": "0",
-      "secondSignature": "500000000",
-      "delegateRegistration": "2500000000",
-      "multiSignature": "500000000",
-      "ipfs": "500000000",
+      "transfer": "100000000",
+      "vote": "100000000",
+      "secondSignature": "100000000",
+      "delegateRegistration": "1000000",
+      "multiSignature": "5000000",
+      "ipfs": "50000000",
       "multiPayment": "10000000",
-      "delegateResignation": "2500000000"
+      "delegateResignation": "1000000"
     },
     "dynamic": {
       "enabled": true,
-      "minFeePool": "100000",
-      "minFeeBroadcast": "100000",
+      "minFeePool": "1",
+      "minFeeBroadcast": "1",
       "addonBytes": {
         "transfer": 100,
         "secondSignature": 250,
@@ -87,11 +87,11 @@ cat > "$CONFIG_PATH" <<- EOF
     }
   },
   "forgers": "25",
-  "blocktime": "5",
-  "transactionsPerBlock": 150,
-  "totalPremine": "90000000000000000000",
+  "blocktime": "4",
+  "transactionsPerBlock": 5000,
+  "totalPremine": "9000000000000000000",
   "rewardHeightStart": 1,
-  "rewardPerBlock": "0",
+  "rewardPerBlock": "1",
   "vendorFieldLength": "64",
   "bridgechainPath": "\$HOME/core-bridgechain",
   "explorerPath": "\$HOME/core-explorer",
@@ -107,7 +107,7 @@ BRIDGECHAIN_PATH=$(jq -r '.bridgechainPath' "$CONFIG_PATH")
 
 ## Install with Dependencies
 rm -rf "$HOME/ark-deployer"
-git clone https://github.com/ArkEcosystem/deployer.git -b master "$HOME/ark-deployer"
+git clone https://github.com/Plusid/deployer.git -b master "$HOME/ark-deployer"
 cd "$HOME/ark-deployer"
 ./bridgechain.sh install-core --config "$CONFIG_PATH" --autoinstall-deps --non-interactive
 if [ "$?" != "0" ]; then
