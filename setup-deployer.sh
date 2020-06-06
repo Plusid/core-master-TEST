@@ -41,7 +41,7 @@ cat > "$CONFIG_PATH" <<- EOF
   "apiPort": 4003,
   "webhookPort": 4004,
   "jsonRpcPort": 8080,
-  "explorerIp": "0.0.0.0",
+  "explorerIp": "104.248.8.11",
   "explorerPort": 4200,
   "chainName": "infinity",
   "token": "FFF",
