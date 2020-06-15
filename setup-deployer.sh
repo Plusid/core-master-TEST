@@ -44,7 +44,7 @@ cat > "$CONFIG_PATH" <<- EOF
   "explorerIp": "104.248.8.11",
   "explorerPort": 4200,
   "chainName": "infinity",
-  "token": "FFF",
+  "token": "INF",
   "cliAlias": "CHAIN_NAME",
   "databaseHost": "localhost",
   "databasePort": "5432",
