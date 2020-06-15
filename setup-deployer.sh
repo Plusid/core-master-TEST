@@ -36,12 +36,12 @@ mkdir -p "$HOME/.deployer/infinity/"
 CONFIG_PATH="$HOME/.deployer/infinity/config.json"
 cat > "$CONFIG_PATH" <<- EOF
 {
-  "coreIp": "104.248.8.11",
+  "coreIp": "134.122.119.115",
   "p2pPort": 4002,
   "apiPort": 4003,
   "webhookPort": 4004,
   "jsonRpcPort": 8080,
-  "explorerIp": "104.248.8.11",
+  "explorerIp": "134.122.119.115",
   "explorerPort": 4200,
   "chainName": "infinity",
   "token": "INF",
