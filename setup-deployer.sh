@@ -31,12 +31,12 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install -y yarn
 
 ## Config
-rm -rf "$HOME/.deployer/infinitytrust/"
-mkdir -p "$HOME/.deployer/infinitytrust/"
-CONFIG_PATH="$HOME/.deployer/infinitytrust/config.json"
+rm -rf "$HOME/.deployer/infinity/"
+mkdir -p "$HOME/.deployer/infinity/"
+CONFIG_PATH="$HOME/.deployer/infinity/config.json"
 cat > "$CONFIG_PATH" <<- EOF
 {
-  "coreIp": "127.0.0.1",
+  "coreIp": "104.248.8.11",
   "p2pPort": 4002,
   "apiPort": 4003,
   "webhookPort": 4004,
@@ -54,7 +54,11 @@ cat > "$CONFIG_PATH" <<- EOF
     "104.248.8.11"
   ],
   "devnetPeers": [
-    "104.248.8.11"
+    "165.227.102.202",
+    "68.183.109.161",
+    "68.183.102.188",
+    "134.122.114.203",
+    "192.241.151.209"
   ],
   "mainnetPrefix": "G",
   "devnetPrefix": "x",
@@ -161,9 +165,9 @@ while [ -z "$NETWORK" ]; do
 done
 
 if [ "$NETWORK" == "mainnet" ]; then
-    cp "$HOME/.bridgechain/mainnet/infinitytrust/delegates.json" "$HOME/.config/infinitytrust-core/mainnet/"
+    cp "$HOME/.bridgechain/mainnet/infinity/delegates.json" "$HOME/.config/infinity-core/mainnet/"
 elif [ "$NETWORK" == "devnet" ]; then
-    cp "$HOME/.bridgechain/devnet/infinitytrust/delegates.json" "$HOME/.config/infinitytrust-core/devnet/"
+    cp "$HOME/.bridgechain/devnet/infinity/delegates.json" "$HOME/.config/infinity-core/devnet/"
 fi
 
 cat > "$HOME/startup.sh" <<- EOF
