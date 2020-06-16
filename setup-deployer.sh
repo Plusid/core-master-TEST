@@ -51,9 +51,10 @@ cat > "$CONFIG_PATH" <<- EOF
   "databaseName": "core_bridgechain",
   "symbol": "∞",
   "mainnetPeers": [
-    "104.248.8.11"
+    "134.122.119.115"
   ],
   "devnetPeers": [
+    "134.122.119.115"
     "165.227.102.202",
     "68.183.109.161",
     "68.183.102.188",
