@@ -1,7 +1,7 @@
 {
-  "name": "@infinitytrust/core",
+  "name": "@infinity/core",
   "version": "2.6.31",
-  "description": "Core of the infinitytrust Blockchain",
+  "description": "Core of the infinity Blockchain",
   "license": "MIT",
   "contributors": [
     "François-Xavier Thoorens <fx@ark.io>",
@@ -17,7 +17,8 @@
   "main": "dist/index",
   "types": "dist/index",
   "bin": {
-    "infinitytrust": "./bin/run"
+    "infinitytrust": "./bin/run",
+    "infinity": "./bin/run"
   },
   "scripts": {
     "build": "yarn clean && yarn compile && yarn copy",
@@ -41,7 +42,8 @@
     "start:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark core:run",
     "start:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark core:run",
     "start:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark core:run --env=test",
-    "infinitytrust": "./bin/run"
+    "infinitytrust": "./bin/run",
+    "infinity": "./bin/run"
   },
   "dependencies": {
     "@arkecosystem/core-api": "^2.6.31",
@@ -128,7 +130,7 @@
         "./dist/hooks/command_not_found/suggest"
       ]
     },
-    "bin": "infinitytrust",
+    "bin": "infinity",
     "topics": {
       "config": {
         "description": "manage core config variables"

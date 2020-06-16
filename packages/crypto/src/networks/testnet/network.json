@@ -1,18 +1,18 @@
 {
   "name": "testnet",
-  "messagePrefix": "INFT message:\n",
+  "messagePrefix": "INF message:\n",
   "bip32": {
     "public": 70617039,
     "private": 70615956
   },
-  "pubKeyHash": 110,
-  "nethash": "e11dce40ca2c469cf18baf624d41f791086aa0d8ca7938aded9491bbfdf8b725",
-  "wif": 126,
+  "pubKeyHash": 127,
+  "nethash": "910a04f53897e2cfa1fb7f885a86094c9ea5a973fa60dbed19e4fa494060cac9",
+  "wif": 57,
   "slip44": 1,
   "aip20": 0,
   "client": {
-    "token": "INFT",
+    "token": "INF",
     "symbol": "∞",
-    "explorer": "http://0.0.0.0:4200"
+    "explorer": "http://134.122.119.115:4200"
   }
 }

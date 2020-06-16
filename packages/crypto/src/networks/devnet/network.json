@@ -1,18 +1,18 @@
 {
   "name": "devnet",
-  "messagePrefix": "INFT message:\n",
+  "messagePrefix": "INF message:\n",
   "bip32": {
     "public": 46090600,
     "private": 46089520
   },
   "pubKeyHash": 137,
-  "nethash": "44204df1fcbb6faf3bb9b1fcbd7206826cfa46eff3cdfd51085e80056d58454d",
-  "wif": 6,
+  "nethash": "79cc63a4f2faf858b144ee4e47215995e31b4ac3d04de97c9aada9183db5a965",
+  "wif": 100,
   "slip44": 1,
   "aip20": 1,
   "client": {
-    "token": "INFT",
+    "token": "INF",
     "symbol": "∞",
-    "explorer": "http://0.0.0.0:4200"
+    "explorer": "http://134.122.119.115:4200"
   }
 }

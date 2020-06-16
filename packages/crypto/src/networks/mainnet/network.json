@@ -1,18 +1,18 @@
 {
   "name": "mainnet",
-  "messagePrefix": "INFT message:\n",
+  "messagePrefix": "INF message:\n",
   "bip32": {
     "public": 46090600,
     "private": 46089520
   },
-  "pubKeyHash": 127,
-  "nethash": "86d9e449f33d41a7a39990f1332cc03c31e4230a86e52c21925bd30a8640b4d0",
-  "wif": 163,
+  "pubKeyHash": 38,
+  "nethash": "8401afa1b4f4bf1da980a04bd60e15578807c95352b39768b44e0753abed9991",
+  "wif": 46,
   "slip44": 111,
   "aip20": 0,
   "client": {
-    "token": "INFT",
+    "token": "INF",
     "symbol": "∞",
-    "explorer": "http://0.0.0.0:4200"
+    "explorer": "http://134.122.119.115:4200"
   }
 }
