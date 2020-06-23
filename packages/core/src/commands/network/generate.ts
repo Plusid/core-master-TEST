@@ -295,7 +295,7 @@ $ ark config:generate --network=mynet7 --premine=120000000000 --delegates=47 --b
         return delegatesWallets.map(w => {
             const { data: transaction } = Transactions.BuilderFactory.delegateRegistration()
                 .usernameAsset(w.username)
-                .fee(`${25 * 10e8}`)
+                .fee(`${25 * 10e5}`)
                 .sign(w.passphrase);
 
             return this.formatGenesisTransaction(transaction, w);
