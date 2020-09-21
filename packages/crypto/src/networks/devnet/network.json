@@ -13,6 +13,6 @@
   "client": {
     "token": "INF",
     "symbol": "∞",
-    "explorer": "http://134.122.119.115:4200"
+    "explorer": "https://explorer.infinitysolutions.io/#/"
   }
 }
