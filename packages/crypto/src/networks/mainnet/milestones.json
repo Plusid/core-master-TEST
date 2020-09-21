@@ -31,6 +31,50 @@
         "multiPayment": 100,
         "delegateResignation": 10000
       }
-    }
+   },
+   { 
+     "height": 100000,
+     "reward": 1000
+   },
+   { 
+     "height": 7776000,
+     "reward": 900
+   },
+   { 
+     "height": 23328000,
+     "reward": 800
+   },
+   { 
+     "height": 31104000,
+     "reward": 700
+   },
+   { 
+     "height": 38880000,
+     "reward": 600
+   },
+   { 
+     "height": 46656000,
+     "reward": 500
+   }, 
+   { 
+     "height": 54432000,
+     "reward": 400
+   }, 
+   {
+     "height": 62208000,
+     "reward": 300
+   },
+   {
+     "height": 69984000,
+     "reward": 200
+   },
+   {
+     "height": 77760000,
+     "reward": 100
+   },
+   {
+     "height": 85536000,
+     "reward": 0
+   }
   }
 ]
