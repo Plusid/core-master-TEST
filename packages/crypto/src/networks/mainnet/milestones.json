@@ -12,11 +12,11 @@
     "epoch": "2020-06-16T16:58:00.119Z",
     "fees": {
       "staticFees": {
-        "transfer": 100000000,
-        "secondSignature": 100000000,
-        "delegateRegistration": 1000000,
-        "vote": 100000000,
-        "multiSignature": 5000000
+        "transfer": 100,
+        "secondSignature": 100,
+        "delegateRegistration": 10000,
+        "vote": 100,
+        "multiSignature": 5000
       }
     },
     "htlcEnabled": false,
@@ -27,9 +27,9 @@
     "aip11": true,
     "fees": {
       "staticFees": {
-        "ipfs": 50000000,
-        "multiPayment": 10000000,
-        "delegateResignation": 1000000
+        "ipfs": 5000,
+        "multiPayment": 100,
+        "delegateResignation": 10000
       }
     }
   }
