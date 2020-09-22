@@ -6,7 +6,7 @@
     "blocktime": 4,
     "block": {
       "version": 0,
-      "maxTransactions": 5000,
+      "maxTransactions": 150,
       "maxPayload": 209715200
     },
     "epoch": "2020-06-16T16:58:00.119Z",
