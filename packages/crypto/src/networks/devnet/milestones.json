@@ -51,13 +51,8 @@
         "delegateRegistration": 100000,
         "vote": 1,
         "multiSignature": 50
-<<<<<<< Updated upstream
-     }
-   }
- ] 
-=======
       }
     }
   } 
 ]
->>>>>>> Stashed changes
+
