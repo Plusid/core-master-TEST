@@ -1,4 +1,4 @@
-[
+[ 
   {
     "height": 1,
     "reward": 1,
@@ -51,6 +51,6 @@
         "delegateRegistration": 100000,
         "vote": 1,
         "multiSignature": 50
-      }
-    }
-]
+     }
+   }
+ ] 
