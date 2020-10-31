@@ -40,19 +40,6 @@
   {
     "height": 18500,
     "reward": 3
-  },
-  {
-    "height": 1200000,
-    "reward": 1,
-    "fees": {
-      "staticFees": {
-        "transfer": 1,
-        "secondSignature": 10,
-        "delegateRegistration": 100000,
-        "vote": 1,
-        "multiSignature": 50
-      }
-    }
   } 
 ]
 
