@@ -30,7 +30,7 @@ export const defaults = {
     rateLimit: {
         enabled: !process.env.CORE_API_RATE_LIMIT,
         pathLimit: false,
-        userLimit: process.env.CORE_API_RATE_LIMIT_USER_LIMIT || 10000,
+        userLimit: process.env.CORE_API_RATE_LIMIT_USER_LIMIT || 100,
         userCache: {
             expiresIn: process.env.CORE_API_RATE_LIMIT_USER_EXPIRES || 60000,
         },
