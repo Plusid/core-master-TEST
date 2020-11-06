@@ -32,10 +32,14 @@
         "delegateResignation": 10000
       }
     }
+  },  
+  {
+    "height": 18000,
+    "reward": 2
   },
-  { 
-     "height": 100000,
-     "reward": 3
+  {
+    "height": 18500,
+    "reward": 3
   },
   { 
      "height": 1520000,
