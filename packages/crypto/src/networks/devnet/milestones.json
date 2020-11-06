@@ -39,7 +39,6 @@
   },
   { 
      "height": 1520000,
-     "activeDelegates": 26,
      "staticFees": true,
      "aip36": true,
      "htlcEnabled": true,
@@ -58,7 +57,6 @@
   },
   { 
      "height": 1600000,
-     "activeDelegates": 25,
      "multiPaymentLimit": 600,
      "block": {
            "acceptExpiredTransactionTimestamps": false
