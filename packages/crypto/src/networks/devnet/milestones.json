@@ -76,6 +76,7 @@
   { 
      "height": 1800000,
      "blocktime": 8,
+     "staticFees": false,
      "multiPaymentLimit": 300
   },
   { 
