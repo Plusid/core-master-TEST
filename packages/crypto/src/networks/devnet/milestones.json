@@ -1,4 +1,4 @@
-[ 
+[
   {
     "height": 1,
     "reward": 1,
@@ -6,17 +6,17 @@
     "blocktime": 4,
     "block": {
       "version": 0,
-      "maxTransactions": 5000,
+      "maxTransactions": 150,
       "maxPayload": 209715200
     },
     "epoch": "2020-06-16T16:58:00.697Z",
     "fees": {
       "staticFees": {
-        "transfer": 100000000,
-        "secondSignature": 100000000,
-        "delegateRegistration": 1000000,
-        "vote": 100000000,
-        "multiSignature": 5000000
+        "transfer": 1,
+        "secondSignature": 100,
+        "delegateRegistration": 10000,
+        "vote": 100,
+        "multiSignature": 5000
       }
     },
     "htlcEnabled": false,
@@ -27,32 +27,99 @@
     "aip11": true,
     "fees": {
       "staticFees": {
-        "ipfs": 50000000,
-        "multiPayment": 10000000,
-        "delegateResignation": 1000000
+        "ipfs": 5000,
+        "multiPayment": 100,
+        "delegateResignation": 10000
       }
     }
-  },
-  {
-    "height": 18000,
-    "reward": 2
-  },
-  {
-    "height": 18500,
-    "reward": 3
-  },
-  {
-    "height": 1200000,
-    "reward": 1,
-    "fees": {
-      "staticFees": {
-        "transfer": 1,
-        "secondSignature": 10,
-        "delegateRegistration": 100000,
-        "vote": 1,
-        "multiSignature": 50
+   },
+   { 
+     "height": 100000,
+     "reward": 1000
+   },
+   { 
+     "height": 1520000,
+     "activeDelegates": 26,
+     "staticFees": true,
+     "aip36": true,
+     "htlcEnabled": true,
+     "fees": {
+      "dynamicFees": {
+        "transfer": 1
       }
     }
-  } 
+   },
+   { 
+     "height": 1540000,
+     "maxPayload": 300000000
+   },
+   { 
+     "height": 1600000,
+     "activeDelegates": 25,
+     "multiPaymentLimit": 600,
+     "block": {
+           "acceptExpiredTransactionTimestamps": false
+      }
+   },
+   { 
+     "height": 1700000,
+     "reward": 1000,
+     "multiPaymentLimit": 1000,
+     "p2p": {
+            "minimumVersions": ["^2.6 || ^2.6.0-next.9"]
+     },
+     "block": {
+            "idFullSha256": true
+        }
+   },
+   { 
+     "height": 1800000,
+     "blocktime": 8,
+     "multiPaymentLimit": 300
+   },
+   { 
+     "height": 2000000,
+     "blocktime": 4
+   },
+   { 
+     "height": 7776000,
+     "reward": 900
+   },
+   { 
+     "height": 23328000,
+     "reward": 800
+   },
+   { 
+     "height": 31104000,
+     "reward": 700
+   },
+   { 
+     "height": 38880000,
+     "reward": 600
+   },
+   { 
+     "height": 46656000,
+     "reward": 500
+   }, 
+   { 
+     "height": 54432000,
+     "reward": 400
+   }, 
+   {
+     "height": 62208000,
+     "reward": 300
+   },
+   {
+     "height": 69984000,
+     "reward": 200
+   },
+   {
+     "height": 77760000,
+     "reward": 100
+   },
+   {
+     "height": 85536000,
+     "reward": 0
+   }
+  
 ]
-

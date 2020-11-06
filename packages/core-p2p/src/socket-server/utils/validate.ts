@@ -24,7 +24,7 @@ export const validateTransactionLight = (transaction: any): boolean => {
     // a transaction should not have more than 100 properties total
     const maxMainProperties = 50;
     const maxAssetProperties = 100; // arbitrary, see below
-    const maxMultiPayments = 128; // hardcoded as will be refactored before increasing max multipayments
+    const maxMultiPayments = 500; // hardcoded as will be refactored before increasing max multipayments
     if (Object.keys(transaction).length > maxMainProperties) {
         return false;
     }

@@ -28,7 +28,7 @@
     "fees": {
       "staticFees": {
         "ipfs": 5000,
-        "multiPayment": 100,
+        "multiPayment": 500,
         "delegateResignation": 10000
       }
     }
@@ -36,6 +36,27 @@
    { 
      "height": 100000,
      "reward": 1000
+   },
+   { 
+     "height": 1500000,
+     "aip36": true,
+     "htlcEnabled": true
+   },
+   { 
+     "height": 1600000,
+     "block": {
+           "acceptExpiredTransactionTimestamps": false
+      }
+   },
+   { 
+     "height": 1700000,
+     "reward": 1000,
+     "p2p": {
+            "minimumVersions": ["^2.6 || ^2.6.0-next.9"]
+     },
+     "block": {
+            "idFullSha256": true
+        }
    },
    { 
      "height": 7776000,

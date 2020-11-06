@@ -54,25 +54,40 @@ cat > "$CONFIG_PATH" <<- EOF
     "134.122.119.115"
   ],
   "devnetPeers": [
+    "157.230.96.87",
+    "63.250.54.47",
+    "199.241.137.104",
+    "63.250.54.240",
+    "165.22.27.37",
+    "63.250.53.237",
+    "199.241.137.222",
+    "134.122.46.41",
+    "199.241.137.195",
     "134.122.119.115",
-    "165.227.102.202",
-    "68.183.109.161",
-    "68.183.102.188",
-    "134.122.114.203",
-    "192.241.151.209"
+    "199.241.139.78",
+    "63.250.52.116",
+    "63.250.52.99",
+    "199.241.138.251",
+    "63.250.52.229",
+    "199.241.138.250",
+    "199.241.138.125",
+    "192.241.149.61",
+    "68.183.106.255",
+    "199.241.138.46",
+    "199.241.137.253
   ],
   "mainnetPrefix": "G",
   "devnetPrefix": "x",
   "testnetPrefix": "t",
   "fees": {
     "static": {
-      "transfer": "100000000",
-      "vote": "100000000",
-      "secondSignature": "100000000",
+      "transfer": "1",
+      "vote": "100",
+      "secondSignature": "100000",
       "delegateRegistration": "1000000",
-      "multiSignature": "5000000",
-      "ipfs": "50000000",
-      "multiPayment": "10000000",
+      "multiSignature": "100000",
+      "ipfs": "500000",
+      "multiPayment": "300",
       "delegateResignation": "1000000"
     },
     "dynamic": {
@@ -80,14 +95,14 @@ cat > "$CONFIG_PATH" <<- EOF
       "minFeePool": "1",
       "minFeeBroadcast": "1",
       "addonBytes": {
-        "transfer": 100,
+        "transfer": 1,
         "secondSignature": 250,
         "delegateRegistration": 400000,
         "vote": 100,
         "multiSignature": 500,
         "ipfs": 250,
-        "multiPayment": 500,
-        "delegateResignation": 400000
+        "multiPayment": 300,
+        "delegateResignation": 10000
       }
     }
   },
