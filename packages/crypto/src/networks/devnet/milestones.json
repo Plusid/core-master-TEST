@@ -61,7 +61,6 @@
      "transactionPool": {
         "dynamicFees": {
             "enabled": false
-            }
         }
      }
   },
