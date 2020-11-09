@@ -49,15 +49,21 @@
      "fees": {
       "staticFees": {
          "transfer": 1
-       },
-      "dynamicFees": {
-        "transfer": 1
-      }
+       }
     }
   },
   { 
      "height": 1540000,
-     "maxPayload": 300000000
+     "block": {
+      "maxTransactions": 5000,
+      "maxPayload": 300000000
+     },
+     "transactionPool": {
+        "dynamicFees": {
+            "enabled": false
+            }
+        }
+     }
   },
   { 
      "height": 1600000,
@@ -80,12 +86,12 @@
   { 
      "height": 1800000,
      "blocktime": 8,
-     "staticFees": false,
      "multiPaymentLimit": 300
   },
   { 
      "height": 2000000,
-     "blocktime": 4
+     "blocktime": 4,
+     "staticFees": true
   },
   { 
      "height": 7776000,
