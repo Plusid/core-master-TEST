@@ -26,7 +26,7 @@ module.exports = {
             minFeePool: 1,
             minFeeBroadcast: 1,
             addonBytes: {
-                transfer: 100,
+                transfer: 1,
                 secondSignature: 250,
                 delegateRegistration: 400000,
                 vote: 100,
