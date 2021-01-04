@@ -10,14 +10,69 @@
 
 ## Introduction
 
-> This repository contains all plugins that make up the ARK Core.
+## Manual installation Node Stable Coin
 
-Check our [dedicated documentation site](https://learn.ark.dev) for information about all available plugins and [How to write a Core Plugin
-](https://learn.ark.dev/application-development/how-to-write-core-dapps) if you want to get started with developing your own plugins.
+### Server Prerequisites
 
-## Install Node Stable Coin Infinity Hedge EDGE
+- minimum VPS recommended 
+4 vCPUs 8GB / 160GB Disk
+- ubuntu 18
+
+### Setup
+
+<details><summary>Install</summary>
+
+```bash
+# Install Relay Infinity Hedge
+git clone https://github.com/InfinitySoftwareLTD/core-master-EDGE.git
+cd core-master-EDGE
+bash install.sh
+
+# choose a network
+Mainnet
+
+# Start Relay
+cd core-master-EDGE
+infinityhedge relay:start
 
 
+# config database
+
+```
+
+</details>
+
+
+#### Become a delegate (forge)
+
+*Note: You cannot specify the Core IP because the config that is generated would result all nodes only connecting to 1 forger. By default Core listens on all available IPs and 127.0.0.1 is used when forging.*
+
+<details><summary>Configuration forger</summary>
+
+```bash
+# Entry your delegate phrase (wallet passphrase) as forger
+infinityhedge config:forger
+
+# Start Forging
+infinityhedge forger:start
+
+```
+
+</details>
+
+##### Check status and logs relay and delegate
+
+```bash
+# status
+pm2 status
+
+# logs relay
+pm2 logs infinityhedge-relay
+
+# logs forging
+pm2 logs infinityhedge-forger
+
+```
 
 ## API Documentation
 
@@ -30,10 +85,6 @@ Check our [dedicated documentation site](https://learn.ark.dev) for information 
 ## Security
 
 If you discover a security vulnerability within this package, please send an e-mail to security@infinitysoftware.io. All security vulnerabilities will be promptly addressed.
-
-## Credits
-
-This project exists thanks to all the people who [contribute](../../contributors).
 
 ## License
 
