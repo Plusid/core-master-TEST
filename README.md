@@ -80,7 +80,7 @@ pm2 logs infinityhedge-forger
 
 ## API Documentation
 
--   API v2 : https://api.infinitysolutions.io
+-   API v2 : https://api.hedge.infinitysolutions.io
 
 ## GitHub Development Bounty
 
