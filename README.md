@@ -45,8 +45,6 @@ infinityhedge relay:start
 
 #### Become a delegate (forge)
 
-*Note: You cannot specify the Core IP because the config that is generated would result all nodes only connecting to 1 forger. By default Core listens on all available IPs and 127.0.0.1 is used when forging.*
-
 <details><summary>Configuration forger</summary>
 
 ```bash
