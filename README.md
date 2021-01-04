@@ -1,4 +1,4 @@
-# Core Infinity
+# Core Infinity Hedge
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/Plusid/core-master/core-master-hedge/banner_hedge.png" />
@@ -60,7 +60,9 @@ infinityhedge forger:start
 
 </details>
 
-##### Check status and logs relay and delegate
+#### Check status and logs relay and delegate
+
+<details><summary>Configuration forger</summary>
 
 ```bash
 # status
@@ -73,6 +75,8 @@ pm2 logs infinityhedge-relay
 pm2 logs infinityhedge-forger
 
 ```
+
+</details>
 
 ## API Documentation
 
