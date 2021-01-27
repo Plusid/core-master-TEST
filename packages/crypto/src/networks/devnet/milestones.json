@@ -9,22 +9,34 @@
       "maxTransactions": 100,
       "maxPayload": 4194304
     },
-    "epoch": "2021-01-27T09:30:09.502Z",
+    "epoch": "2021-01-27T09:48:23.616Z",
     "fees": {
       "staticFees": {
         "transfer": 100,
-        "secondSignature": 1000000,
+        "secondSignature": 1000,
         "delegateRegistration": 10000000,
         "vote": 10000,
-        "multiSignature": 1000
+        "multiSignature": 1000,
+        "htlcLock": 1000000,
+        "htlcClaim": 0,
+        "htlcRefund": 0
       }
     },
-    "htlcEnabled": false,
     "vendorFieldLength": 64
   },
   {
     "height": 2,
+    "htlcEnabled": true,
+    "vendorFieldLength": 64,
     "aip11": true,
+    "aip18": true,
+    "aip29": true,
+    "aip36": true,
+    "p2p": {
+       "minimumVersions": [
+           "^2.6 || ^2.6.0-next.9"
+       ]
+    },
     "fees": {
       "staticFees": {
         "ipfs": 50000000,
