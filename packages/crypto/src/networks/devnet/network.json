@@ -1,18 +1,18 @@
 {
-    "name": "devnet",
-    "messagePrefix": "DARK message:\n",
-    "bip32": {
-        "public": 46090600,
-        "private": 46089520
-    },
-    "pubKeyHash": 30,
-    "nethash": "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-    "wif": 170,
-    "slip44": 1,
-    "aip20": 1,
-    "client": {
-        "token": "DARK",
-        "symbol": "DѦ",
-        "explorer": "https://dexplorer.ark.io"
-    }
+  "name": "devnet",
+  "messagePrefix": "EDGE message:\n",
+  "bip32": {
+    "public": 46090600,
+    "private": 46089520
+  },
+  "pubKeyHash": 137,
+  "nethash": "4736dd82d9b1c2e7560a1788e4a9b75519c026653bf714b533536ee5e4e2d4b8",
+  "wif": 153,
+  "slip44": 1,
+  "aip20": 1,
+  "client": {
+    "token": "EDGE",
+    "symbol": "H",
+    "explorer": "http://142.93.227.152:4200"
+  }
 }
